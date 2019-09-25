@@ -1,0 +1,1371 @@
+--> Good JAVASCRIPT article <--
+-> https://levelup.gitconnected.com/10-things-to-learn-on-the-way-to-become-a-javascript-master-f4fc632b2bb7
+-> https://medium.com/@trungluongquang/10-simple-effective-tips-to-master-javascript-c365aa176852
+-> https://hashnode.com/post/zero-to-one-how-i-mastered-javascript-and-how-you-can-too-ciuwmrw9j00r50q539clhhdj7
+
+
+-> https://developer.mozilla.org/en-US/docs/Glossary/JavaScript
+-> https://apps.ankiweb.net/
+
+--> JS Books <--
+-> https://www.amazon.com/Effective-JavaScript-Specific-Software-Development/dp/0321812182
+-> http://shop.oreilly.com/product/9780596517748.do
+-> https://addyosmani.com/resources/essentialjsdesignpatterns/book/
+-> https://www.amazon.com/Test-Driven-JavaScript-Development-Developers-Library/dp/0321683919
+
+-> https://en.wikipedia.org/wiki/Pomodoro_Technique
+
+
+----------------------------------------
+7 Data Types
+----------------------------------------
+* Primitive  Type
+    1.String
+    2.Number
+    3.Boolean
+    4.Null 
+    5.Undefiend
+    6.Symbols
+
+* Refrence Type
+    1.Array
+    2.Object Literals
+    3.Functions
+    4.Dates 
+    5.Anything Else.....
+
+-> typeof() -This is used to know the type of the DATA
+
+
+----------------------------------------
+8 Type Converstion / Type Coversion
+----------------------------------------
+=> .length property only works on Strings
+
+* Anyting to String
+    -> String(value) - Function
+        - val = String(123456);
+        
+    -> toString(); - Method
+        - val = (123456).toString();
+
+* Anyting to NUmber
+    -> Number(value) - Function
+        - val = Number('123456');
+        
+    -> parseInt(); - Method
+        - val = ('123456').parseInt();
+        - val = ('123456').parseFloat(); - to Get decimal points
+
+        
+----------------------------------------
+9 Numbers & Math Objects
+----------------------------------------
+* Numbers
+    -> Addition(val1 + val2)
+    -> Subtraction(val1 - val2)
+    -> Multiplication(val1 * val2)
+    -> Division(val1 / val2)
+    -> Modulas(val1 % val2)
+
+* Math Objects        
+    -> Math.PI; //PI value 3.14...
+    -> Math.E; //Eulers Rule
+    -> Math.round(20.10); //to round the decimal
+    -> Math.ceil(20.10); //To round upper
+    -> Math.floor(20.10); //to round lower
+    -> Math.sqrt(144); //to Get the squre root fo the number
+    -> Math.abs(-25); //to Get the absolute verstion of the number
+    -> Math.pow(10, 2); //To find the power of somthing
+    -> Math.min(111,22,33,48,10,45,35,20,55); //To find the Min value
+    -> Math.max(11,22,33,48,55,45,35,20,10); //To find the Min value
+    -> Math.random(); //To Get the random number
+    -> Math.random() * 20 + 1; //To Get the random number between 20
+    -> Math.floor(Math.random() * 20 + 1); //To Get the random number between 20 with round value
+
+
+----------------------------------------
+10 Strings & Concatination
+----------------------------------------
+* Concatinantion
+    -> var + var ('+' is used to concte strings)
+
+* Escaping
+    -> That\'s my Car ('\' is use to escape)
+
+* Length property
+    -> var.length (To find the length of the string)
+
+* String Manipulation Methods
+    -> var.concat()
+        - Used to conacte letter or number
+
+    -> var.toUpperCase()
+        - Converts the string in to UPPER CASE
+
+    -> var.tolowerCase()
+        - Converts the string in to lowe case
+    
+    -> var.indexOf()
+        - Find the indexOf the char from start
+    
+    -> var.lastIndexOf()
+        - Find the indexOf the char from End
+
+    -> var.cahtAt()
+        - Find the location of the particular char
+
+    -> var.substring(1,4)
+        - slice the string from point1 to point2
+    
+    -> var.slice()
+        - slice the string from point1 to point2
+
+    -> var.split()
+        - Split the whole string using space or , or . or etc....
+
+    -> var.replace('Parth', 'Rahul')
+        - Replace char in string
+
+    -> var.includes('Parth')
+        - Check the char or word is incluede/exist or not in the string
+          and replay in Boolean
+
+
+----------------------------------------
+11 Templet Literal
+----------------------------------------
+
+* Without Templet Strings/Literals
+
+    ->  html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>Country: ' + county + '</li></ul>';
+
+    ->  html = '<ul>' +
+        '<li> Name: ' + name + '</li>' +
+        '<li> Age: ' + age + '</li>' +
+        '<li> Job: ' + job + '</li>' +
+        '<li> Country: ' + county + '</li>' +
+        '<ul>';
+
+
+* With Templet Strings/Literals
+
+    ->  html = `
+            <ul>
+                <li>Name: ${name}</li>
+                <li>Age: ${age}</li>
+                <li>Job: ${job}</li>
+                <li>Country: ${county}</li>
+                <li>${20+10}</li>
+                <li>${hello()}</li>
+                <li>${age > 20 ? 'over20' : 'under 20'}</li>
+            </ul>
+
+        `;
+
+
+----------------------------------------
+12 Arrays & Array Mutaion
+----------------------------------------
+* Declaration Style 
+    -> const number = [1,2,3,4,5,6];
+    -> const numbers = new Array(1,2,3,4,5,6);
+    -> const fruits = ['apple', 'banana', 'orange', 'mango'];
+    -> const mixedArray = [1, 'string', true, undefined, {a:1, b:2}, new Date()];
+
+* check whether its array or not
+    -> val = Array.isArray(number);
+
+* Array Mutation
+    -> Insert into array
+        - number[2] = 200
+
+    -> Check the indexOf value
+        - val = number.indexOf(200)
+    
+    -> Add to END of the array
+        - array.push(8)
+    
+    -> Add to START of the array
+        - array.unshift(8)
+    
+    -> Take off from the END fo the array
+        - array.pop(8)
+
+    -> Take off from the START fo the array
+        - array.shift(8)
+    
+    -> Spice values from array(remove values from point-1 to point-2)
+        - number.splice(1,3)
+
+    -> Reverse the array
+        - number.reverse()
+
+    -> Conctinating the array
+        - val = number.concat(numbers)
+
+* Sorting Array
+    -> Sort array in acending
+        - number.sort(function (x,y) { 
+            return x - y;
+          });
+
+    -> Sort array in decending
+        - number.sort(function (x,y) { 
+             return y - x;
+          });
+
+* Find in array
+    function under50(num) { 
+        return num < 50;
+    }
+
+    val = number.find(under50);
+
+
+----------------------------------------
+13 Object Literal
+----------------------------------------
+* Createing Object Literal
+
+    ->  const person = {
+            firstName: 'Parth',
+            lastName: 'Chaudhary',
+            age: 23,
+            email: 'parth@gmail.com',
+            hobbies: ['msuic', 'sports', 'reading'],
+            address: {
+                city: 'Mehsana',
+                state: 'Gujarat',
+                country: 'India'
+            },
+            GetBirthYear: function () { 
+                return 2019 - this.age;
+            }
+        }
+
+
+* Array of object Literals
+
+    ->  const pople = [
+            {name: 'Parth', age: 24},
+            {name: 'Darshan', age: 33},
+            {name: 'Raju', age: 45},
+        ];
+
+----------------------------------------
+14 Dates and Time
+----------------------------------------
+
+**```````````````````````````````````````````````````````````````````````
+    NOTE:- In javascript we can write if statement without { brackets }.
+```````````````````````````````````````````````````````````````````````**
+
+* Find the current Date(System Date)
+    -> const today =  new Date();
+
+* Set the custome Date(mm dd yyy)
+    -> const birthDate =  new Date('4-29-1996');
+    -> const birthDate =  new Date('4/29/1996');
+    -> const birthDate =  new Date('April 29 1996');
+
+*Get perticular thing from Date and Time
+    -> today.GetMonth(); //Month are array based, means it starts from 0 to 11
+    -> today.GetDay();
+    -> today.GetDate();
+    -> today.GetFullYear();
+
+    -> today.GetHours();
+    -> today.GetMinutes();
+    -> today.GetSeconds();
+    -> today.GetMilliseconds();
+    -> today.GetTime(); // It give Time Stemp
+
+*Set perticular thing To Date and Time
+    -> birthDate.setMonth(4); 
+    -> birthDate.setDate(12);
+    -> birthDate.setFullYear(1998);
+    -> birthDate.setHours(12);
+    -> birthDate.setMinutes(30);
+    -> birthDate.setSeconds(59);
+
+
+----------------------------------------
+15 If Statements and Comparison Operators
+----------------------------------------
+*if statemant syntax
+    ->  if(this){
+
+            do something;
+            
+        }else{
+
+            do something;
+
+        }
+
+*if elase if statemant syntax
+    ->  if(this){
+
+            do something;
+
+        }else if(this){
+
+            do something;
+
+        }else if(this){
+
+            do something;
+
+        }else{
+
+            do something;
+
+        }
+
+*Using AND(&&) and OR(||) Operator
+
+    ->  AND(&&)
+        -   if(this && this){
+
+                do something;
+            
+            }else{
+
+                do something;
+
+            }
+
+    ->  OR(||)
+        -   if(this || this){
+
+                do something;
+            
+            }else{
+
+                do something;
+
+            }
+
+* Ternary Operator
+    -> console.log(id === 100 ? do_something : do_something);
+
+
+----------------------------------------
+16 Switch Case
+----------------------------------------
+* Switches are kidn of smilier like an "ELSE If"
+
+* Examples: 
+    -> // SWITCH CASE
+        const color = 'red';
+
+        switch(color){
+            case 'red':
+                console.log('Color is Red');
+                break;
+            case 'blue':
+                console.log('Color is Blue');
+                break;
+            default:
+                console.log('Color is not Red and Blue.');
+                break;                        
+        }
+
+        // Find the current day using SWITCH
+        let day;
+
+        switch(new Date().GetDay()){
+            case 0: 
+                day = 'Sunday';
+                break;
+            case 1: 
+                day = 'Monday';
+                break;
+            case 2: 
+                day = 'Tuesday';
+                break;
+            case 3: 
+                day = 'Wednesday';
+                break;
+            case 4: 
+                day = 'Thursday';
+                break;
+            case 5: 
+                day = 'Friday';
+                break;
+            case 6: 
+                day = 'Saturday';
+                break;    
+        }
+
+        console.log(`Today is ${day}. `);
+
+----------------------------------------
+17 Function Declaration AND EXPRESSION
+----------------------------------------
+*ES way to check and set the value in parameter if value is not set
+    ->  function greet(firstName, lastName) {
+            if(typeof firstName === 'undefined'){
+                firstName = 'Parth'
+            }
+            if(typeof lastName === 'undefined'){
+                lastName = 'Chaudhary'
+            }
+            
+            return `Hello ${firstName} ${lastName}`;
+        }
+
+*ES6 way to set the value in parapeter
+    ->  function greet(firstName = 'Parth', lastName = 'Chaudhary') {    
+            return `Hello ${firstName} ${lastName}`;
+        }
+        console.log(greet());
+
+* FUNCTION EXPRESSION
+    ->  const sqrt = function (x = 8) { 
+            return x*x;
+        }
+        console.log(sqrt());
+
+* IMMIDIATLEY INVOKABLE FUNCTION EXPRESSION - IFFIEs (we can run this function withoud calling them)
+    ->  (function() { 
+            console.log('Hello Run..');
+        })();
+
+* IFFIEs with parameter
+    ->  (function(name) { 
+            console.log('Hello ' + name);
+        })('Parth');
+
+*PROPERTY METHODS
+    ->  const todo = {
+            add: function () { 
+                console.log('Add todo..');
+            },
+            edit: function (id) { 
+                console.log(`Edited id is: ${id}`);        
+            },    
+        }
+        //adding another object in todo
+        todo.delete = function () { console.log('Delete Todo..');}
+
+        todo.add();
+        todo.edit(22);
+        todo.delete();
+
+
+
+----------------------------------------
+18 GENERAL LOOPS
+----------------------------------------
+* Use FOR loop when you know hoe many times the iteration going to happen
+* Use WHILE loop when you don't know hoe many times the iteration going to happen
+
+*FOR LOOP
+    ->  for(let i = 0; i < 10; i++){
+            Do something... 
+        }
+
+    ->  for(let i = 0; i <= 10; i++){
+            if(i === 5){
+                console.log(`${i} is my lucky number`);
+                continue; -> to skip
+            }
+
+            if(i === 8){        
+                console.log(`Stop loop at number ${i}`);
+                break;  -> to break or stop loop
+            }
+            
+            console.log(i);
+        }
+
+
+*WHILE LOOP
+
+    ->  let i = 0;
+        while(i < 10){
+            console.log(`Number: ${i}`);
+            i++;
+        }
+
+
+* DO WHILE
+
+    ->  let i = 100;
+        do{
+            console.log(`Number ${i}`);
+            i++;
+        }while(i < 10);
+
+
+* FOR EACH
+
+    ->  const fruit = ['apple', 'banana', 'mango', 'orange', 'grapes', 'strewberry'];
+
+    ->  Loop through array using FOR loop
+        for(let i = 0; i < fruit.length; i++){
+            console.log(fruit[i]);    
+        }
+
+    ->  Loop through array using FOR EACH loop
+        forEach(function (1 , 2 ,3) { 
+            1 -> Iterator (array, etc..)
+            2 -> Index 
+            3 -> Array
+        });
+
+    ->  fruit.forEach(function (fruit, index, array) { 
+            console.log(`${index} : ${fruit}`);
+            console.log(array);
+        });        
+
+
+* MAP
+    ->  const user = [
+            {id: 1, name: 'Parth'},
+            {id: 2, name: 'Rahul'},
+            {id: 3, name: 'Harshil'},
+            {id: 4, name: 'Yash'},
+            {id: 5, name: 'Rushabh'},
+            {id: 6, name: 'ketul'},
+            {id: 7, name: 'Tej'}
+        ];
+
+        const ids = user.map(function (user) { 
+            return user.id;
+        });
+
+        console.table(ids);
+
+
+* FOR IN LOOP - used for objects
+
+    ->  const user = {
+            firstName: 'Parth',
+            lastName: 'Chaudhary',
+            age: 23
+        };
+
+        for(let x in user){
+            // This prints the key of the objects
+            console.log(x);
+
+            // This prints the key and vallue of the objects
+            console.log(`${x} : ${user[x]}`);
+        }
+
+
+------------------------------------------
+19 WINDOW METHOD / OBJECTS / PROPERTY
+------------------------------------------
+* Alert (Show Alert popup)
+    ->  alert('Hello');
+
+* Prompt(To Get some value from user)
+    ->  const input = prompt();
+        console.log(input);
+
+* Confirm (To confirm the users decision)
+    ->  if(confirm(Are you sure?)){
+            console.log('Yes');
+        }else{
+            console.log('No');
+        }
+
+* OUTER HEIGHT AND WIDTH
+    ->  window.outerHeight;
+    ->  window.outerWidth;
+
+* INNER HEIGHT AND WIDTH
+    ->  window.innerHeight;
+    ->  window.innerWidth;
+
+* SCROLL POINTS
+    ->  window.scrollY;
+    ->  window.scrollX;
+
+* LOCATION OBJECT
+    ->  window.location;
+    ->  window.location.host;
+    ->  window.location.hostname;
+    ->  window.location.port;
+    ->  window.location.href;
+    ->  window.location.search;
+
+* REDIRECT & RELOAD
+    -> window.location.href = "https://site.com"
+    -> window.location.reload();
+
+* HISTORY OBJECT
+    ->  window.history.go(-1);
+    ->  window.history.length;
+
+* Navigator Object
+    ->  window.navigator;
+    ->  window.navigator.appName;
+    ->  window.navigator.appVersion;
+    ->  window.navigator.userAgent;
+    ->  window.navigator.platform;
+    ->  window.navigator.vendor;
+    ->  window.navigator.language;
+    ->  window.navigator.languages;
+
+------------------------------------------
+20 FUNCTION AND BLOCK LEVEL SCOPE
+------------------------------------------
+* 'var' have Function scope
+* 'let' and 'const' have Block Level Scope
+
+------------------------------------------
+21 WHAI IS DOM
+------------------------------------------
+*DOM
+    -> Document Object Model
+
+------------------------------------------
+22 Examining The Document Object
+------------------------------------------
+* PROPERTYS OF DOCUMENT OBJECT
+    let val;
+
+    val = document;
+    val = document.all;
+    val = document.all[0];
+    val = document.all.length;
+    val = document.head;
+    val = document.body;
+    val = document.doctype;
+    val = document.domain;
+    val = document.URL;
+    val = document.characterSet;
+    val = document.contentType;
+
+    val = document.forms;
+    val = document.forms.length;
+    val = document.forms[0];
+    val = document.forms[0].id;
+    val = document.forms[0].method;
+    val = document.forms[0].action;
+
+    val = document.links;
+    val = document.links[0];
+    val = document.links[0].id;
+    val = document.links[0].className;
+    val = document.links[0].classList[0];
+
+    val = document.images;
+
+    val = document.scripts;
+    val = document.scripts[0];
+    val = document.scripts[0].src;
+    val = document.scripts[0].GetAttribute('src');
+
+    let scripts = document.scripts;
+
+    let scriptsArr = Array.from(scripts);
+
+    scriptsArr.forEach(function (script) {
+        console.log(script.GetAttribute('src'));
+        console.log(script.src);
+        
+    });
+
+    console.log(val);
+
+------------------------------------------
+23 DOM Selectors For Single Elements
+------------------------------------------
+*select the element using id
+    -> document.GetElementById('task-title')
+
+*Get thing from selected items
+    -> console.log(val);
+    -> console.log(val.id);
+    -> console.log(val.className);
+
+* change styling
+    -> val.style.color = '#f2f2f2';
+    -> val.style.backgroundColor = '#020202';
+    -> val.style.padding = '5px 10px';
+    -> val.style.borderRadius = '2px';
+    -> val.style.textTransform = 'uppercase';
+
+* change content
+    -> val.innerText = 'Main Title';
+    -> val.textContent = 'My Task';
+    -> val.innerHTML = '<small>Sub Heading</small>';
+
+* document.querySelector()
+    -> document.querySelector('#task-title')
+    -> document.querySelector('.card-title')
+    -> document.querySelector('h5')
+    -> document.querySelector('li').style.color = 'red';
+* select using nested structure
+    -> document.querySelector('ul li').style.color = 'blue';
+* using pshudo class
+    -> document.querySelector('ul li:last-child').style.color = '#f2f';
+
+
+------------------------------------------
+24 DOM Selectors For Multiple Elements
+------------------------------------------
+* DOM Selectors For Multiple Elements
+
+    const item = document.GetElementsByClassName('collection-item');
+    item[2].style.color = 'red';
+    item[3].textContent = 'Hell.. O..';
+    console.log(item);
+
+* To select multiple item in nested structure
+    const listItem = document.querySelector('ul').GetElementsByClassName('collection-item');
+    console.log(listItem);
+
+* Select using GetElementByTagName()
+    let lis = document.GetElementsByTagName('li');
+    lis[0].style.color = 'red';
+    lis[3].textContent = 'Hell.. O..';
+    console.log(lis);
+
+* convert HTML collection to array
+    lis = Array.from(lis);
+ 
+    for(let i = 0; i < lis.length ; i++){
+        lis[i].textContent = `Item : ${i}`;    
+        console.log(lis[i].className);
+    }
+
+    lis.forEach(function (item, index) {
+        console.log(item.className);
+        let i = 1;
+        item.textContent = `Item : ${index}`;
+    });
+
+
+* Query Selector All
+    const item = document.querySelectorAll('ul li.collection-item');
+
+    item.forEach(function (li, index) { 
+        console.log(li.className + " "  + index);    
+        li.style.color = 'red';
+    });
+
+    const liOdd = document.querySelectorAll('ul li.collection-item:nth-child(odd)');
+    const liEven = document.querySelectorAll('ul li.collection-item:nth-child(even)');
+
+* Using forEach
+
+    liOdd.forEach(function (li, index) { 
+        li.style.color = 'green';
+    });
+
+    liEven.forEach(function (li, index) { 
+        li.style.color = 'red';
+    });
+
+
+* Using for loop
+    for(let i = 0; i < item.length; i++) { 
+        liOdd[i].style.backgroundColor = 'green';
+        liEven[i].style.backgroundColor = 'red';
+    }
+
+------------------------------------------
+25 Traversing The DOM
+------------------------------------------
+* Get the child node
+    -> val = list.childNodes;
+
+* check the node type
+    -> list.childNodes[0].nodeType;
+    -> list.childNodes[1].nodeType;
+
+    -> Output of the node type will be defiend from following
+        1 - Element
+        2 - Attribute(depricated)
+        3 - Text Node
+        8 - Comment
+        9 - Document it self
+        10 - Doctyle
+
+* Get childer element node
+    -> list.children;
+    -> list.children[0].style.color = 'red';
+
+* Get childer of the childern
+    -> list.children[2].children;
+    -> list.children[2].children[0];
+    -> list.children[2].children[0].id = 'close-btn'
+    -> list.children[2].children[0].textContent = 'close';
+    -> list.children[2].children[0];
+
+* Get first child
+    -> list.firstChild;
+    -> list.firstElementChild;
+
+* Get last child
+val = list.lastChild;
+val = list.lastElementChild;
+
+* Get child element count
+    -> list.childElementCount;
+
+* Get Parent elements/node
+    -> listItem.parentNode;
+    -> listItem.parentElement;
+
+* Get parent node of the parent
+    -> listItem.parentElement.parentNode;
+    -> listItem.parentElement.parentElement;
+
+* Get next Siblings
+    -> listItem.nextSibling;
+    -> listItem.nextElementSibling;
+
+* Get next of next Siblings
+    -> listItem.nextSibling.nextSibling;
+    -> listItem.nextElementSibling.nextElementSibling;
+
+
+* Get prev Siblings
+    -> listItem.previousSibling;
+    -> listItem.previousElementSibling;
+
+* Get prev of next Siblings
+    -> listItem.nextSibling.previousSibling;
+    -> listItem.nextElementSibling.previousElementSibling;
+
+
+--------------------------------------------------
+26 Creating Elements and Append elemet to HTML
+--------------------------------------------------
+* Create element
+    -> const li = document.createElement('li');
+
+* Add CLASS and ID to element
+    -> li.className = 'collection-item'
+    -> li.id = 'list-item'
+
+* Add attribute to element
+    -> li.setAttribute('title', 'list-item');
+
+* Add textNode and append
+    -> li.appendChild(document.createTextNode('Hello World...'));
+
+* Create new link element
+    -> const link = document.createElement('a');
+
+* Add classes and attribute
+    -> link.className = 'delete-item secondary-content';
+    -> link.setAttribute('href', '#');
+
+* Append li as child to ul
+    -> document.querySelector('ul.collection').appendChild(li);
+
+* Append link to li 
+    -> li.appendChild(link);
+
+* Add icon to link (to add whole html)
+    -> link.innerHTML = '<i class="fa fa-remove"></i>';
+
+
+--------------------------------------------------
+27 Removing and Replacing Elements
+--------------------------------------------------
+
+* Create new element
+    -> const newHeading = document.createElement('h2');
+
+* add id
+    -> newHeading.id = 'task-title';
+* add text
+    -> newHeading.appendChild(document.createTextNode('Task Title'));
+
+* Get the old heading
+    -> const oldHeading = document.getElementById('task-title');
+
+* Get the parent of the old element
+    -> const classAction = oldHeading.parentNode;
+
+* replace element
+    -> classAction.replaceChild(newHeading, oldHeading);
+
+* Remove Element from the DOM
+    -> const li = document.querySelectorAll('li');
+    -> const ul = document.querySelector('ul');
+    -> li[0].remove();
+    -> ul.removeChild(li[2]);
+
+* Classes and Attributes
+    -> const firstLi = document.querySelector('li:first-child');
+    -> const link = firstLi.children[0];
+
+    -> let val;
+
+* classes 
+    -> val = link.className;
+    -> val = link.classList;
+    -> val = link.classList[0];
+* add and remove classes
+    -> link.classList.add('test');
+    -> link.classList.remove('test');
+
+* attributes
+    -> val = link.getAttribute('href');
+    -> val = link.setAttribute('href', 'https://google.com');
+    -> val = link.hasAttribute('href'); //true
+    -> val = link.hasAttribute('title'); //false
+    -> val = link.setAttribute('title','google');
+    -> val = link.removeAttribute('title');
+    -> val = link; 
+
+
+
+--------------------------------------------------
+28 Event Listeners The Event Object
+--------------------------------------------------
+* Add event Listeners
+    ->  document.querySelector('.clear-tasks').addEventListener('click', function (e) { 
+            console.log('clicked');    
+            console.log(e);
+        });
+
+* passing function in event Listeners
+    ->  clearBtn.addEventListener('click', btnClick);
+
+* event object and target object
+    ->  function btnClick(e) {
+            let val;
+
+        * Event target element
+            val = e;
+            val = e.target;
+            val = e.target.id;
+            val = e.target.className;
+            val = e.target.classList;
+
+        * Event type
+            val = e.type;
+
+        * Time Stemp
+            val = e.timeStamp;
+
+            // Co-ordinates event relative to the windows
+            val = e.clientY;
+            val = e.clientX;
+
+            // Co-ordinates event relative to the element
+            val = e.offsetY;
+            val = e.offsetX;
+
+
+            e.target.innerText = 'hello';
+
+            console.log(val);
+            
+        }
+
+--------------------------------------------------
+29 Mouse Events
+--------------------------------------------------
+* Click
+    -> clearBtn.addEventListener('click', runEvent);
+
+* Double Click
+    -> clearBtn.addEventListener('dblclick', runEvent);
+
+* Mouse Down
+    -> clearBtn.addEventListener('mousedown', runEvent);
+
+* Mouse Up
+    -> clearBtn.addEventListener('mouseup', runEvent);
+
+* Mouse Enter
+    -> card.addEventListener('mouseenter', runEvent);
+    
+* Mouse Leave
+    -> card.addEventListener('mouseleave', runEvent);
+
+* Mouse Over
+    -> card.addEventListener('mouseover', runEvent);
+
+* Mouse Out
+    -> card.addEventListener('mouseout', runEvent);
+
+* Mouse Move
+    -> card.addEventListener('mousemove', runEvent);
+
+--------------------------------------------------
+30 Keyboard Input Events
+--------------------------------------------------
+
+* Clear value from
+    -> taskInput.value = '';
+
+* Form Submit Event
+    -> form.addEventListener('submit', runEvent);
+
+* Key Down
+    -> taskInput.addEventListener('keydown', runEvent);
+
+* Key Up
+    -> taskInput.addEventListener('keyup', runEvent);
+
+* Key Press
+    -> taskInput.addEventListener('keypress', runEvent);
+
+* Focus
+    -> taskInput.addEventListener('focus', runEvent);
+
+* Blur
+    -> taskInput.addEventListener('blur', runEvent);
+
+* cut
+    -> taskInput.addEventListener('cut', runEvent);
+
+* paste
+    -> taskInput.addEventListener('paste', runEvent);
+
+* input
+    -> taskInput.addEventListener('input', runEvent);
+
+* change (for select)
+    -> select.addEventListener('change', runEvent);
+
+
+--------------------------------------------------
+31 Event Bubbling  and Event Delegation
+--------------------------------------------------
+* Event Bubbling
+(on the click on any element, the dom event fires on all the its parent element)
+    -> document.querySelector('.card-title').addEventListener('click', function () { 
+            console.log('card-title');
+        });
+
+    -> document.querySelector('.card-content').addEventListener('click', function () { 
+            console.log('card-content');
+        });
+
+    -> document.querySelector('.card').addEventListener('click', function () { 
+            console.log('card');
+        });
+
+    -> document.querySelector('.col').addEventListener('click', function () { 
+            console.log('col');
+        });
+
+
+* Event Delegation()
+    
+    ->  document.body.addEventListener('click', deleteItem);
+    ->  function deleteItem(e) {
+            if(e.target.parentElement.classList.contains('delete-item')){
+                console.log('delete-item');
+                e.target.parentElement.parentElement.remove();
+            }
+        }
+
+--------------------------------------------------
+32 Local and Session storage
+--------------------------------------------------
+* Set local storage item
+    -> localStorage.setItem('name', 'Parth');
+    -> localStorage.setItem('age', '24');
+
+* Set local storage item
+    -> sessionStorage.setItem('name', 'rahul');
+
+* Remove from local storage
+    -> localStorage.removeItem('name');
+
+* Get Form storage
+    ->  const person = {
+            name : localStorage.getItem('name'),
+            age : localStorage.getItem('age')
+        }
+
+* clear from sorage
+    -> localStorage.clear();
+
+
+// -------------------------------------------------------------
+        From 33 to 42(DOM Project) are Completed
+------------------------------------------------------------- //
+
+//----- OBJECT ORIENTED PROGRAMMING -----//
+
+--------------------------------------------------
+43 Constructors and the this Keyword
+--------------------------------------------------
+-> Constructors are used to create multiple instans of object
+
+* Creating CONSTROCTOR
+
+    ->  function Person(name, dob) { 
+            this.name = name;
+            this.birthday = new Date(dob);
+            this.getCalcAge = function () { 
+                const diff = Date.now() - this.birthday.getTime();
+                const ageDate = new Date(diff);
+
+                return Math.abs(ageDate.getUTCFullYear() - 1970);
+            }
+        }
+
+        const parth = new Person('Parth', '4-29-1996');
+        const Rahul = new Person('Rahul', '6-29-1995');
+
+--------------------------------------------------
+44 Built In JAVASCRIPT Constructors
+--------------------------------------------------
+* String
+    -> const name1 = 'jeff'; --> Without Object 
+    -> const name2 = new String('jeff'); --> with object
+
+
+* Number    
+
+    -> const num1 = 5; --> Without Object 
+    -> const num2 = new Number(5); --> with object
+    
+
+* Boolean
+
+    -> const bool1 = true; --> Without Object 
+    -> const bool2 = new Boolean(true); --> with object
+
+
+* Function
+    ->  const getSum1 = function (x,y) { 
+            return x + y;
+        }  --> Without Object 
+
+    -> const getSum2 = new Function('x','y', 'return x + y'); --> with object
+
+
+* Objects
+    ->  const person1 = {
+            name: 'Parth'
+        }; 
+        --> Without Object 
+
+    ->   const person2 = new Object({
+            name: 'Parth'
+        }); 
+        --> with object
+
+
+* Arrays
+    -> const arr1 = [1,2,3,4,5,6,7,8,9]; --> Without Object 
+    -> const arr2 = new Array(1,2,3,4,5,6,7,8,9,10); --> with object
+
+
+* Regular Expression
+    -> const re1 = /\w+/; --> Without Object
+    -> const re2 = new RegExp('\\w+'); --> with object
+
+--------------------------------------------------
+45 Prototypes Explained
+--------------------------------------------------
+--> Each Object in javascipt have prototype
+--> prototype is object it self
+
+*   function Person(firstName,lastName, dob) { 
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = new Date(dob);
+        this.getCalcAge = function () { 
+            const diff = Date.now() - this.birthday.getTime();
+            const ageDate = new Date(diff);
+
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+    }
+
+    // Calc Age
+    Person.prototype.getCalcAge = function () { 
+        const diff = Date.now() - this.birthday.getTime();
+        const ageDate = new Date(diff);
+
+        return Math.abs(ageDate.getUTCFullYear() - 1970);
+    }
+
+    // Get Full Name
+    Person.prototype.getFullName = function () { 
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    // get Married
+    Person.prototype.getMarried = function (newLastName) { 
+        this.lastName = newLastName;
+    }
+
+    const parth = new Person('Parth', 'Chaudhary', '4-29-1996');
+    const reachal = new Person('Reachal', 'John', '01-1-1975');
+
+    console.log(parth.getCalcAge());
+
+    console.log(parth.getFullName());
+
+    console.log(reachal.getFullName());
+
+    reachal.getMarried('Doe');
+
+    console.log(reachal.getFullName());
+
+    console.log(reachal.hasOwnProperty('firstName'));
+    console.log(reachal.hasOwnProperty('getFullName'));
+
+
+--------------------------------------------------
+46 Prototypal Inheritance 
+--------------------------------------------------
+* Perosn Constructor
+    function Person(firstName, lastName) { 
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    --> greetings prototype
+    Person.prototype.greeting = function () { 
+        return `Hello ${this.firstName} ${this.lastName}`;
+    }
+
+* Customer Constructor 
+    function Customer(firstName, lastName, phone, membership) { 
+        Person.call(this, firstName, lastName); --> Inheriting from person
+        this.phone = phone;
+        this.membership = membership;
+    }
+
+    --> Inherit the personn prototype method
+    Customer.prototype = Object.create(Person.prototype);
+
+    --> Customer Greetings(Over-writing greetings for Customer)
+    Customer.prototype.greeting = function () { 
+        return `Hello ${this.firstName} ${this.lastName}, Welcome to our Company.`;
+    }
+
+
+--------------------------------------------------
+47 Using Object
+--------------------------------------------------
+--> we can do same things like Constructor using custom Object.create
+
+    const personPrototype = {
+        greeting: function () { 
+            return `Hello ${this.firstName} ${this.lastName}`;
+        },
+        getMarried: function (newLastName) { 
+            this.lastName = newLastName;
+        }
+    }
+
+    --> Creating Object and assiging value
+    -----------------------------------------------
+    const reachal = Object.create(personPrototype);
+    reachal.firstName = 'Reachel';
+    reachal.lastName = 'Toni';
+    reachal.age = 30;
+    reachal.getMarried('Rajesh');
+
+    --> Creating Object and assiging in another way
+    -----------------------------------------------
+    const parth = Object.create(personPrototype, {
+        firstName: {value:'Parth'},
+        lastName: {value:'Chaudhary'},
+        age: {value:30},
+    });
+
+
+
+--------------------------------------------------
+48 ES6 Classes
+--------------------------------------------------
+--> ES calsses are the syntatic sugar
+
+* Creating Classes
+    --> class Person {
+            constructor(firstName, lastName, dob){
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.birthDay = new Date(dob);
+            }
+
+            greeting(){
+                return `Hello ${this.firstName} ${this.lastName}`;
+            }
+
+            calcAge(){
+                const diff = Date.now() - this.birthDay.getTime();
+                const ageDate = new Date(diff);
+
+                return Math.abs(ageDate.getUTCFullYear() - 1970);
+            }
+
+            getMarried(newLastName){
+                this.lastName = newLastName;
+            }
+
+            
+            --> Static Method
+            static addNumber(x, y){
+                return x + y;
+            }
+        }
+
+        --> creating object
+        const person1 = new Person('Reachel', 'Raghav', '4-29-1996');
+
+        person1.getMarried('Raju')
+        console.log(person1);
+
+        --> Static Methoud can used by class name.
+        console.log(Person.addNumber(1,2));
+
+
+--------------------------------------------------
+49 Sub Classes
+--------------------------------------------------
+    class Person{
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        greeting(){
+            return `Hello ${this.firstName} ${this.lastName}!!!`;
+        }
+    }
+
+    --> Extending PERSON class in CUSTOMER
+    class Customer extends Person {
+        constructor(firstName, lastName, phone, membership) {
+            --> TO use Person Class constructor values
+            super(firstName, lastName);
+            this.phone = phone;
+            this.membership = membership;
+        }
+
+        static getMemCost(){
+            return 500;
+        }
+    }
+
+    -> Initializing CUSTOMER 
+    const parth = new Customer('Parth', 'Chaudhary', '9725171322', 'Pro');
+
+    -> calling greeeting method of Person in Customer(because we extened this Perons)
+    console.log(parth.greeting());
+
+    console.log(Customer.getMemCost());
+
+
+// -------------------------------------------------------------
+        From 50 to 55(BookList Project) is Completed
+------------------------------------------------------------- //
+
+//----- Asynchronous JavaScript Ajax Fetch API -----//
+
+--> 
