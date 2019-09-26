@@ -1368,4 +1368,32 @@ val = list.lastElementChild;
 
 //----- Asynchronous JavaScript Ajax Fetch API -----//
 
---> 
+
+--------------------------------------------------
+58 XHR Object Methods  Working With Text
+--------------------------------------------------
+--> HTTP Status
+    -> 200: "OK"
+    -> 403: "Forbidden"
+    -> 404: "Page Not Found"
+
+--> readyState Values
+    -> 0: Request not inititalized
+    -> 1: Server Connection Established
+    -> 2: request recived
+    -> 3: processing request
+    -> 4: request finished and response is ready
+
+--------------------------------------------------
+61 REST APIs  HTTP Requests
+--------------------------------------------------
+--> HTTP Requests   
+    /--> MAIN 4 Requests <--/
+    -> GET: "Retrives data from a specified resourse"
+    -> POST: "Submit data to be an processed to a specified resourse"
+    -> PUT: "Update a specified resources"
+    -> DELETE: "Delete a specified resources"
+
+    -> HEAD: "Same as get but does not returns a body"
+    -> OPTIONS: "Returns the supported HTTP Methods"
+    -> PATCH: "Update partial resources"

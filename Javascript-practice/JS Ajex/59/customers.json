@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "name": "Rahul",
+        "company": "99 Designs",
+        "phone": "97251-71322"
+    },
+    {
+        "id": 2,
+        "name": "Rajeev",
+        "company": "Drc Systems",
+        "phone": "97251-12358"
+    },
+    {
+        "id": 3,
+        "name": "Darshan",
+        "company": "Infibeam",
+        "phone": "97251-54321"
+    },
+    {
+        "id": 4,
+        "name": "Vishal",
+        "company": "TCS",
+        "phone": "98521-12358"
+    },
+    {
+        "id": 5,
+        "name": "Bhavin",
+        "company": "Influence",
+        "phone": "95482-12358"
+    }
+
+]
