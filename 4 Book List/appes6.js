@@ -5,11 +5,9 @@ class Book {
         this.isbn = isbn;
     }
 }
-
 class UI {
     addBookToList(book){
         const list = document.getElementById('book-list');
-    
         // create TR ele
         const row = document.createElement('tr');
         // insert COL into TR
@@ -44,13 +42,11 @@ class UI {
             document.querySelector('.alert').remove();
         }, 3000);
     }
-
     deleteBook(target){
         if(target.className === 'delete'){
             target.parentElement.parentElement.remove();
         }
     }
-
     clearFields(){
         document.getElementById('title').value = '';
         document.getElementById('author').value = '';
