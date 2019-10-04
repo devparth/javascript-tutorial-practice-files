@@ -332,3 +332,50 @@
 // --> calling greeeting method of Person in Customer(because we extened this Perons)
 // console.log(parth.greeting());
 // console.log(Customer.getMemCost());
+
+
+// // Async & Await
+// async function myFunc() {
+//     return 'Hello...!';
+// }
+
+// // console.log(myFunc());
+
+// myFunc()
+// .then(res => console.log(res)); 
+
+// Async & Await
+// async function myFunc() {
+
+//     const promise = new Promise((resolve, reject) => {
+//         setTimeout(() => resolve('Hello'), 1000);
+//     });
+
+//     const err = true;
+
+//     if(!err){
+//         const res = await promise; //wait untill promise is resolved
+//         return res;
+//     }else{
+//         await Promise.reject(new Error('Somthing went wrong...'))
+//     }    
+// }
+
+// myFunc()
+// .then(res => console.log(res))
+// .catch(err => console.log(err))
+
+// Async & Await with Fetch
+async function getUsers() { 
+    // await the response of the fetch call
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    // only proceed once its resloves
+    const data = await response.json();
+
+    // only proceed once second promise is resolved
+    return data;
+}
+
+getUsers()
+.then(users => console.log(users))
