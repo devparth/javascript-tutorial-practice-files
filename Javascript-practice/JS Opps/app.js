@@ -334,7 +334,7 @@
 // console.log(Customer.getMemCost());
 
 
-// // Async & Await
+//69 Async & Await
 // async function myFunc() {
 //     return 'Hello...!';
 // }
@@ -366,16 +366,50 @@
 // .catch(err => console.log(err))
 
 // Async & Await with Fetch
-async function getUsers() { 
-    // await the response of the fetch call
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+// async function getUsers() { 
+//     // await the response of the fetch call
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
 
-    // only proceed once its resloves
-    const data = await response.json();
+//     // only proceed once its resloves
+//     const data = await response.json();
 
-    // only proceed once second promise is resolved
-    return data;
-}
+//     // only proceed once second promise is resolved
+//     return data;
+// }
 
-getUsers()
-.then(users => console.log(users))
+// getUsers()
+// .then(users => console.log(users))
+
+// 69 Ascync and Await
+
+// -> Without Ascync
+// function myFunc() { 
+//     return 'Hello';
+// }
+
+// console.log(myFunc());
+
+// -> With Ascync
+// async function myFunc() { 
+
+//     const promise = new Promise ((resolve, reject) => {
+//         setTimeout(() => resolve('Hello'), 1000);
+//     });
+
+//     const error = true;
+
+//     if(!error){
+//         const res = await promise; //wait until promise will reolve
+//         return res;
+//     }else{
+//         await Promise.reject(new Error('Something went wrong'));
+//     }
+
+    
+// }
+
+// myFunc()
+//     .then(res => console.log(res))
+//     .catch(err => console.log(err));    
+
+// Async await with Fetch Api
