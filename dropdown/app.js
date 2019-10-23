@@ -28,9 +28,9 @@ function dropDownFunc(dropDown) {
 
     if(dropDown.classList.contains('hover-dropdown') === true){
 
-        dropDown.onmouseover  =  dropDown.onmouseout = myFunc;
+        dropDown.onmouseover  =  dropDown.onmouseout = dropdownHover;
 
-        function myFunc(e){
+        function dropdownHover(e){
             if(e.type == 'mouseover'){
                 // Close the opend dropdown
                 closeDropdown();
@@ -41,10 +41,10 @@ function dropDownFunc(dropDown) {
                 
             }
 
-            if(e.type == 'mouseout'){
-                this.parentElement.classList.remove('dropdown-open');
-                this.nextElementSibling.classList.remove('dropdown-active');
-            }
+            // if(e.type == 'mouseout'){
+            //     // close the dropdown after user leave the list
+            //     e.target.nextElementSibling.onmouseleave = closeDropdown;
+            // }
         }
     }
 
@@ -65,6 +65,8 @@ window.addEventListener('click', function (e) {
 
 // Close the openend Dropdowns
 function closeDropdown() { 
+    console.log('run');
+    
     // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
     document.querySelectorAll('.dropdown-container').forEach(function (container) { 
         container.classList.remove('dropdown-open')
@@ -74,3 +76,9 @@ function closeDropdown() {
         menu.classList.remove('dropdown-active');
     });
 }
+
+// close the dropdown on mouse out from the dropdown list
+document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) { 
+    // close the dropdown after user leave the list
+    dropDownList.onmouseleave = closeDropdown;
+});
