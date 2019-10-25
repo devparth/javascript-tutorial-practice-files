@@ -27,7 +27,9 @@ h1{
     margin: 0 -15px;
 
     .col{
+        width: 100%;
         margin-bottom: 30px;
+        padding: 0 15px;
     }
 }
 
@@ -37,6 +39,7 @@ h1{
     margin-bottom: 15px;
 }
 
+// Default acc CSS
 .acc-toggle{
     background: #0979CE;
     color: #ffffff;
@@ -50,13 +53,16 @@ h1{
     label{
         font-size: 20px;
         font-weight: 600;
+        cursor: pointer;
     }
 
     .acc-indicator{
         position: absolute;
+        top: 18px;
         right: 30px;
         width: 20px;
         height: 20px;
+        cursor: pointer;
 
         &::before{
             content: '';
@@ -95,6 +101,80 @@ h1{
     display: block;
 }
 
+.acc-container.acc-open .acc-indicator{
+    transform: rotate(45deg);
+}
+
+// acc-outline
+
+.acc-outline{
+    .acc-container,
+    .acc-toggle{
+        background-color: #ffffff;
+        color: #000000;
+        border: 2px solid;
+        box-shadow: none;
+    }
+
+    .acc-toggle{
+        margin: -2px;
+        padding: 13px 30px;
+
+        .acc-indicator{
+            top: 16px;
+            &::before,
+            &::after{
+                background-color: #000000;
+            }
+        }
+    }
+
+    .acc-body{
+        p{
+            color: #000000;
+        }
+    }
+}
+
+// acc-plain
+.acc-plain{
+    .acc-container,
+    .acc-toggle{
+        background-color: #ffffff;
+        color: #000000;
+        border: 0;
+    }
+
+    .acc-toggle{
+        .acc-indicator{            
+            &::before,
+            &::after{
+                background-color: #000000;
+            }
+        }
+    }
+
+    .acc-body{
+        p{
+            color: #000000;
+        }
+    }
+}
+
+// acc-gradient
+.acc-gradient{
+    .acc-container,
+    .acc-toggle{
+        background: #ff3131;
+        background: -moz-linear-gradient(262deg, #ff3131 11%, #5400ff 100%);
+        background: -webkit-linear-gradient(262deg, #ff3131 11%, #5400ff 100%);
+        background: linear-gradient(262deg,
+        #ff3131 11%,
+        #5400ff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff3131",endColorstr="#5400ff",GradientType=1);
+    }
+}
+
 
 @media(min-width:768px){
     .row{
@@ -104,20 +184,3 @@ h1{
         }
     }
 }
-
-
-
-// .learner-list .learner-detail .rank-info{
-//     position: absolute;
-//     right: 0;
-//     background:#446bd2;
-//     width: 30px;
-//     text-align: center;
-//     height: 30px;
-//     line-height: 30px;
-//     border-radius: 50px;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     color:#fff;
-//     font-weight: 600;
-// }

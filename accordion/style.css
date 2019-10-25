@@ -32,7 +32,9 @@ h1 {
 }
 
 .row .col {
+  width: 100%;
   margin-bottom: 30px;
+  padding: 0 15px;
 }
 
 .acc-container {
@@ -56,13 +58,16 @@ h1 {
 .acc-toggle label {
   font-size: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .acc-toggle .acc-indicator {
   position: absolute;
+  top: 18px;
   right: 30px;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .acc-toggle .acc-indicator::before {
@@ -100,6 +105,59 @@ h1 {
 
 .acc-body.acc-body-active {
   display: block;
+}
+
+.acc-container.acc-open .acc-indicator {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.acc-outline .acc-container,
+.acc-outline .acc-toggle {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.acc-outline .acc-toggle {
+  margin: -2px;
+  padding: 13px 30px;
+}
+
+.acc-outline .acc-toggle .acc-indicator {
+  top: 16px;
+}
+
+.acc-outline .acc-toggle .acc-indicator::before, .acc-outline .acc-toggle .acc-indicator::after {
+  background-color: #000000;
+}
+
+.acc-outline .acc-body p {
+  color: #000000;
+}
+
+.acc-plain .acc-container,
+.acc-plain .acc-toggle {
+  background-color: #ffffff;
+  color: #000000;
+  border: 0;
+}
+
+.acc-plain .acc-toggle .acc-indicator::before, .acc-plain .acc-toggle .acc-indicator::after {
+  background-color: #000000;
+}
+
+.acc-plain .acc-body p {
+  color: #000000;
+}
+
+.acc-gradient .acc-container,
+.acc-gradient .acc-toggle {
+  background: #ff3131;
+  background: linear-gradient(262deg, #ff3131 11%, #5400ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff3131",endColorstr="#5400ff",GradientType=1);
 }
 
 @media (min-width: 768px) {
