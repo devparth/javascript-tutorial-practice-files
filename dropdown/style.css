@@ -105,9 +105,18 @@ h1 {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow: hidden;
   border-radius: 10px;
   z-index: 10;
+}
+
+.dropdown-container .dropdown-menu ul > li:first-child > a {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdown-container .dropdown-menu ul > li:last-child > a {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .dropdown-container .dropdown-menu a {
@@ -126,6 +135,45 @@ h1 {
 .dropdown-container .dropdown-menu a:hover, .dropdown-container .dropdown-menu a:active, .dropdown-container .dropdown-menu a:focus {
   background-color: #0979ce;
   color: #ffffff;
+}
+
+.dropdown-container .submenu {
+  position: relative;
+}
+
+.dropdown-container .submenu::before {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  border: 5px solid;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.dropdown-container .submenu .submenu-list {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding-left: 10px;
+  display: none;
+}
+
+.dropdown-container .submenu .dropdown-menu {
+  position: relative;
+  display: block !important;
+}
+
+.dropdown-container .submenu .dropdown-menu::before {
+  right: auto;
+  left: -6px;
+  top: 23px;
 }
 
 .dropdown-menu,
@@ -177,6 +225,21 @@ h1 {
 .dropdown-container.dropdown-open .dropdown-toggle:before {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+}
+
+.submenu.submenu-open::before {
+  border-color: #ffffff;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+}
+
+.submenu.submenu-open > a {
+  background-color: #0979CE;
+  color: #ffffff;
+}
+
+.submenu.submenu-open .submenu-list {
+  display: block !important;
 }
 
 .dropdown-bordered .dropdown-toggle {
