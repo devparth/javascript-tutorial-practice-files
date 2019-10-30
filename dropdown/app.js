@@ -68,8 +68,8 @@ document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
     // close the dropdown after user leave the list
     dropDownList.onmouseleave = function () { 
         // onmouseleave check if submenu is open or not
-        dropDownList.querySelectorAll('.submenu').forEach(function (submenu) { 
-            if(submenu.classList.contains(submenu) == false){
+        dropDownList.querySelectorAll('li.submenu').forEach(function (li) {
+            if(li.classList.contains(submenu-open) == false){
                 closeDropdown();
             }
         });
