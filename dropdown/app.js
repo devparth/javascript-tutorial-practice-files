@@ -1,6 +1,5 @@
 // Get all the dropdown from document
 document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
-document.querySelectorAll('.submenu').forEach(submenuFunc);
 
 // Dropdown Open and Close function
 function dropDownFunc(dropDown) {
@@ -64,20 +63,23 @@ function closeDropdown() {
 }
 
 // close the dropdown on mouse out from the dropdown list
-document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
+document.querySelectorAll('.dropdown-container').forEach(function (dropDownList) {
     // close the dropdown after user leave the list
-    dropDownList.onmouseleave = function () { 
+    dropDownList.onmouseleave = function (e) { 
         // onmouseleave check if submenu is open or not
-        dropDownList.querySelectorAll('li.submenu').forEach(function (li) {
+        dropDownList.querySelectorAll('.submenu').forEach(function (li) {
             if(li.classList.contains(submenu-open) == false){
+                console.log(li);
                 closeDropdown();
+            }else{
+                console.log('else close');
             }
         });
     };
 });
 
-
 /*---- Submenu Logic ----*/
+document.querySelectorAll('.submenu').forEach(submenuFunc);
 
 // submenu
 function submenuFunc(submenuHover) {
@@ -91,7 +93,7 @@ function submenu(e) {
     if (e.type == 'mouseover') {
         if (this.classList.contains('submenu') == true) {
             // closing other open submenu classes
-            submenuClose();
+            // submenuClose(); // creating problem in opening another submenu inside submenu 
             // adding class to submenu li
             this.classList.add('submenu-open');
         }

@@ -101,7 +101,7 @@ h1{
     display: block;
 }
 
-.acc-container.acc-open .acc-indicator{
+.acc-container.acc-open > .acc-toggle > .acc-indicator{
     transform: rotate(45deg);
 }
 

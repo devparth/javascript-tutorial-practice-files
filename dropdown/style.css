@@ -137,11 +137,11 @@ h1 {
   color: #ffffff;
 }
 
-.dropdown-container .submenu {
+.submenu {
   position: relative;
 }
 
-.dropdown-container .submenu::before {
+.submenu::before {
   content: "";
   position: absolute;
   right: 15px;
@@ -156,7 +156,7 @@ h1 {
   transition: all ease-in-out 0.2s;
 }
 
-.dropdown-container .submenu .submenu-list {
+.submenu .submenu-list {
   width: 100%;
   position: absolute;
   top: 0;
@@ -165,12 +165,12 @@ h1 {
   display: none;
 }
 
-.dropdown-container .submenu .dropdown-menu {
+.submenu .dropdown-menu {
   position: relative;
   display: block !important;
 }
 
-.dropdown-container .submenu .dropdown-menu::before {
+.submenu .dropdown-menu::before {
   right: auto;
   left: -6px;
   top: 23px;
@@ -240,7 +240,7 @@ h1 {
   color: #ffffff;
 }
 
-.submenu.submenu-open .submenu-list {
+.submenu.submenu-open > .submenu-list {
   display: block !important;
 }
 
