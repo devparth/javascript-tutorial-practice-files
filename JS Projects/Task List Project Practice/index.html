@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrapper" class="my-4">
+        <div class="container">
+            <h1 class="text-success mb-4"> 
+                <span class="text-danger">
+                    <i class="fa fa-list-ul" aria-hidden="true"></i>
+                </span>
+                Task List App
+            </h1>
+
+            <div class="app-wrapper">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h3 class="mb-0">Add Task</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="task-add">
+                            <div class="form-group">
+                                <input id="task-input" type="text" class="form-control form-control-lg" placeholder="Add Task!!!">
+                            </div>
+                            <input id="add-task" type="submit" class="btn btn-primary btn-lg btn-block">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h3 class="mb-0">Filter Tasks</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group mb-0">
+                            <input id="filter-task" type="text" class="form-control form-control-lg" placeholder="Filter Tasks!!!">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h3 class="mb-0">Tasks List</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                        </ul>
+                        <a href="#" id="clear-tasks" class="btn btn-primary btn-lg btn-block mt-3">Clear Tasks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

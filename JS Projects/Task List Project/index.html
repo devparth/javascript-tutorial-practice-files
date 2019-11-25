@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div id="wrapper" class="my-4">
+        <div class="container">
+            <h1 class="text-success mb-4"> 
+                <span class="text-danger">
+                    <i class="fa fa-list-ul" aria-hidden="true"></i>
+                </span>
+                Task List App
+            </h1>
+
+            <div class="app-wrapper">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <h4 class="m-0">Task List</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" placeholder="Add New Task !!!" id="task">
+                            </div>
+                            <input type="submit" value="Add Task" class="btn btn-block btn-lg btn-primary font-weight-bold" style="cursor: pointer;">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="m-0">Filter Task</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" placeholder="Filter Tasks !!!" id="filter">
+                        </div>
+                        <ul class="list-group collection mb-3">
+                            <!-- <li class="list-group-item">Cras justo odio</li> -->
+                        </ul>
+                        <a href="#" class="clear-task btn btn-lg btn-block btn-primary font-weight-bold">Clear Task</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+</body>
+</html>
