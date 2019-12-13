@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task List</title>
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css" />
+</head>
+<body>
+    <div class="grid-container">
+        <form id='task-list'>
+            <h2>Add Task</h2>
+            <label>
+                <input type="text" placeholder="Add youre daily task here...!!!" class="large" id='task-input'>
+            </label>
+            <input type="submit" name="" id="" class="success button large" value="Add Task" id="task-btn">   
+        </form>
+        <div class="grid-x grid-padding-x">
+            <div class="medium-12 cell">
+                <h2>Filter Tasks</h2>
+                <label>
+                    <input type="text" placeholder="Filter task here...!!!" class='filter-task'>
+                </label>
+            </div>
+        
+            <div class="medium-12 cell">
+                <h2>Task List</h2>
+                <div class="card">
+                    <div class="card-section">                            
+                        <ul class="no-bullet task-container">
+                        </ul>
+                    </div>
+                </div>
+                <a href="#" class="alert button large clear-tasks">Clear Task</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./app.js"></script>
+</body>
+</html>
