@@ -1,4 +1,7 @@
-document.querySelectorAll(".click-me").forEach(function (openContent) { 
+
+// Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, commodi.
+
+document.querySelectorAll(".click-me").forEach(function (openContent) {
     openContent.addEventListener('click', myFunc);
 });
 var textContainer = document.querySelectorAll(".text-container");
