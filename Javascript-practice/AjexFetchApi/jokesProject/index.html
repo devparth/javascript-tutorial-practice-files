@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jokes Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <style>
+        *,*::after,*::before{
+            box-sizing: border-box;
+            font-family:'Montserrat';
+        }
+
+        body{
+            background-color: #f6f6f6;
+            padding: 0px 20px;
+        }
+
+        h1{
+            border-bottom: 3px solid darkblue;
+            padding-bottom: 10px;
+        }
+        .control{
+            margin-bottom: 15px;
+        }
+
+        .control > label{
+            display: block;
+            margin-bottom: 12px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .control > input[type=number]{
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid darkblue;
+            width: 100%;
+        }
+
+        .control > button{
+            width: 100%;
+            padding: 8px;
+            font-size: 20px;
+            background-color: darkblue;
+            border: 0;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .jokes-container{
+            margin-top: 30px;
+        }
+
+        .jokes-list{
+            padding-left: 15px;
+            border: 10px solid darkblue;
+            padding: 20px 30px 5px 30px;
+        }
+
+        .jokes-list li, .jokes-list div{
+            margin-bottom: 15px;
+            background-color: #faea08;
+            padding: 15px;
+            font-size: 18px;
+            line-height: 25px;
+            font-weight: 600;
+            color: darkblue;
+            border: 2px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jokes Generator</h1>
+
+    <form>
+        <div class="control">
+            <label for="number">Number of Jokes</label>
+            <input type="number" name="" id="number" placeholder="Enter number">
+        </div>
+        <div class="control">
+            <button class="get-jokes">Get Jokes</button>
+        </div>
+    </form>
+
+    <div class="jokes-container">
+        <h2>Jokes List</h2>
+        <ol class="jokes-list">
+
+        </ol>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

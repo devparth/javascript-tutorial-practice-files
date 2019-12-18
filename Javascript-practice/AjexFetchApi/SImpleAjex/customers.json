@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Jhon Doe",
+        "company": "123 Desings",
+        "phone": 9797585812
+    },
+    {
+        "id": 2,
+        "name": "Yash Thalar",
+        "company": "Infibeam",
+        "phone": 9876543212
+    },
+    {
+        "id": 3,
+        "name": "Parth Chaudhary",
+        "company": "DRC Systems",
+        "phone": 7894563218
+    },
+    {
+        "id": 4,
+        "name": "Darshan Dave",
+        "company": "tatvaSoft",
+        "phone": 8524569517
+    },
+    {
+        "id": 5,
+        "name": "Rahul Barot",
+        "company": "Atlas",
+        "phone": 9874236515
+    }
+]

@@ -1,0 +1,88 @@
+/*
+----------------------------------------
+   Ajex And Fetch API
+----------------------------------------
+<-- AJEX = ASynchronous Javascript And XML -->
+
+=> Synchronous Programming
+---> Wait Untill Data Fetch and DO next thing after Data Featch and operation COmpletes.
+
+=> ASynchronous Programming
+---> We can Do another things while he Data Feathing is in process.
+
+=> Ways to WORK with Async COde
+---> Callbacks
+---> Promises(ES2106)
+---> Async/Await(New Feature)
+
+--------------------------------------
+   What Is Ajax ?
+--------------------------------------
+--> Asynchronous JS and XML
+--> Set of web tech
+--> Send and recive data Asynchronously
+--> Does not Interfears with the current page
+--> JSON has replaced the XML
+
+--> Make Async request in the background
+--> NO page Reload/Refresh
+--> Featch Data
+--> Very Interactve
+
+*/
+
+
+/*
+   ------------------------------------
+    AJEX Steps
+   ------------------------------------
+
+   1. Create New XHR Objext
+   --> const newXHR = new XMLHttpRequest();
+
+   2. Open The XHR
+   --> newXHR.open('GET,POST', 'fileName', true(asynchronous)/false(synchronous));
+
+   3. Class XHR Onload
+   --> newXHR.onload = function(){}
+
+   4. Check for OK Status
+   --> newXHR.onload = function(){
+       if(this.status === 200){
+        //  Perform the operation
+       }
+   }
+
+   5. Check if there any err whicle data fetching
+   --> newXHR.onerror = function () {
+        console.log('Resquest Err');
+       }
+
+    6. Send the responce
+    --> newXHR.send();
+*/
+
+/*
+   ------------------------------------
+    What is API
+   ------------------------------------
+
+   --> Application Programming Interface
+   --> Structured request and srtuctured response
+
+   ------------------------------------
+    What is REST APIs
+   ------------------------------------
+
+   --> Respresentational State Transfer
+   --> Architecture
+   --> HTTP Request
+        - GET: Restrive Data from source
+        - POST: Submit Data to some specifics source
+        - PUT: Update a specific resource
+        - DELETE: Delete Data a specific resourse
+
+        - HEAD: Same as get but does not returens body(only returns head)
+        - OPTIONS: Returns the supported HTTP methods
+        - PATCH: Update partial resoursces
+*/
