@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch API</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
+    <style>
+        *, *:after, *::before{
+            box-sizing: border-box;
+            font-family: Montserrat;
+        }
+
+        main{
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .control{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        button{
+            background-color: purple;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px;
+            border: 2px solid rgb(0, 0, 0);
+            width: 30%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <h1>Fetch Api</h1>
+
+        <div class="control">
+            <button id="getText">Get Text</button>
+            <button id="getJson">Get JSON</button>
+            <button id="getApiData">Get API DATA</button>
+        </div>
+
+        <div class="output">
+            <h2>Output Data</h2>
+        </div>
+    </main>
+
+    <!-- <script src="./app.js"></script> -->
+    <script src="./app-new.js"></script>
+</body>
+</html>
