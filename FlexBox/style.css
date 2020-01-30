@@ -1,0 +1,250 @@
+
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic); */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+.box{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+.box-1{background-color: #1abc9c;}
+.box-2{background-color: #76bc1a;}
+.box-3{background-color: #1a25bc;}
+.box-4{background-color: #bc701a;}
+.box-5{background-color: #bc1a42;}
+.box-6{background-color: #1abc70;}
+.box-7{background-color: #bc1a1a;}
+.box-8{background-color: #bc1aae;}
+.box-9{background-color: #ffee00;}
+.box-10{background-color: #18183d;}
+
+.container{
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border: 10px solid goldenrod;
+    min-height: 100vh;
+}
+
+.box{
+    flex-basis: 100px;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+}
+
+
+.wrapper{
+    background-color: #f6f6f6;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.flex-nav{
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #000000;
+}
+
+.flex-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: flex;
+}
+
+.flex-nav li{
+    -webkit-box-flex:3;
+            flex:3;
+}
+
+.flex-nav .social{
+    -webkit-box-flex: 1;
+            flex: 1;
+}
+
+.flex-nav a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 5px;
+    color: #ffffff;
+    transition: all ease-in-out 0.3s;
+    -webkit-transition: all ease-in-out 0.3s;
+    -moz-transition: all ease-in-out 0.3s;
+    -ms-transition: all ease-in-out 0.3s;
+    -o-transition: all ease-in-out 0.3s;
+}
+
+.flex-nav ul li a:hover{
+    background-color: rgba(255,255,255, 0.5);
+}
+
+@media all and (max-width: 991px){
+    .flex-nav ul{
+        flex-wrap: wrap;
+    }
+
+    .flex-nav li{
+        -webkit-box-flex: 1;
+                flex: 1 1 50%;
+    }
+
+    .flex-nav .social{
+        -webkit-box-flex: 1;
+                flex: 1 1 10%;
+    }
+}
+
+@media all and (max-width: 600px){
+    div{
+        display: -webkit-box;
+        display: flex;
+    }
+}
+
+.wrapper{
+    background-color: rgba(0,0,0,0.8);
+}
+
+.pricing-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan{
+    color: #ffffff;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: rgba(0,255,255,.5);
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 20%;
+}
+
+.plan h2{
+    margin-bottom: 20px;
+}
+
+.plan ul{
+    list-style: none;
+}
+
+.plan li{
+    margin-bottom: 10px;
+}
+
+.plan p{
+    margin-bottom: 15px;
+}
+
+.plan .price{
+    color: #000000;
+    font-weight: bold;
+}
+
+.btn{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #ffee00;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.wrapper{
+    background-color: #000000;
+}
+
+.elemets p{
+    font-size: 30px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.elemets p:nth-child(even){
+    font-size: 20px;
+}
+
+.elemets{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.elemets p{
+    flex: 0 2 calc(33.333333% - 20px);
+}
+
+.form{
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 4px;
+    padding: 15px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.form input,
+.form select,
+.form button{
+    padding: 10px 15px;
+    border: 0;
+    height: 40px;
+}
+
+.form select{
+    border: 1px solid #000000;
+    border-width: 0 1px;
+}
+
+.form label{
+    font-weight: 500;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.form button{
+    background-color: #ffee00;
+    color: #bc1a1a;
+    font-size: 15px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+}
+
+.form input{
+    flex: 2;
+}
+
+.form button{
+    flex: 0;
+}
+
+div{
+    color: #000000;
+    
+}

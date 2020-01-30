@@ -1,0 +1,11 @@
+-------------------------
+Best Project
+-------------------------
+1. Web application using api (SIMPLE CURD)
+    -Make a website with Some kind of API Usage
+2. Bronchure site
+3. E-commerce site
+4. Personal Portfolio
+5. Simple game
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto, nisi?

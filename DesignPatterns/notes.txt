@@ -1,0 +1,38 @@
+----------------------------------------------------------
+Design Patterns
+----------------------------------------------------------
+
+What are DESING PATTERNS ?
+-> Elegant solutions to repeating problems in software
+   desing.
+
+----------------------------------------------------------
+
+----------------------------------------------------------
+BOOK -> Design Patterns (by GoF).
+----------------------------------------------------------
+
+----------------------------------------------------------
+>> Design Patterns
+----------------------------------------------------------
+=> Creational
+    -> About diffrents ways to create Objetcs
+
+=> Structural
+    -> About Relation between those Objetcs
+
+=> Behavioural
+    -> About intraction and communication between those
+       Objetcs
+
+----------------------------------------------------------
+>> The Essentials
+----------------------------------------------------------
+=> Clsses
+=> Interfaces
+=> Encapsulation
+=> Abstraction
+=> Inheritance
+=> Polymorphism
+=> UML
+----------------------------------------------------------

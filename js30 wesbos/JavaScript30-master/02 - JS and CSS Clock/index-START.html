@@ -99,17 +99,17 @@
 
       // Get seconds
       const seconds = now.getSeconds();
-      const secondsDegree = calcDegree( seconds , 60);
+      const secondsDegree = calcDegree(seconds , 60);
       secondHand.style.transform = `rotate(${secondsDegree}deg)`;
 
       // Get Minutes
       const minutes = now.getMinutes();
-      const minutesDegree = calcDegree( minutes , 60);
+      const minutesDegree = calcDegree(minutes , 60);
       minHand.style.transform = `rotate(${minutesDegree}deg)`;
 
       // get Hour
       const hour = now.getHours();
-      const hourDegree = calcDegree( hour , 12);
+      const hourDegree = calcDegree(hour , 12);
       hourHand.style.transform = `rotate(${hourDegree}deg)`;
     }
 
